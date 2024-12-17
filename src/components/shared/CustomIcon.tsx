@@ -14,7 +14,7 @@ import {
 } from '@phosphor-icons/react'
 import JikeLogo from '../../../public/images/icon/jike.png'
 import Image from 'next/image'
-import JUSTLogo from '../../../public/images/icon/just.png'
+import JUSTLogo from '../../../public/images/icon/JUST.png'
 export function CustomIcon({
   name,
   size = 20,

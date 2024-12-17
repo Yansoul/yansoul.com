@@ -23,7 +23,7 @@ const CustomLink = (props: React.AnchorHTMLAttributes<HTMLAnchorElement>) => {
 }
 
 export const mdxComponents: MDXComponents = {
-  Image: (props: ImageProps) => <Image {...props} className='rounded-3xl my-6' />,
+  Image: (props: ImageProps) => <Image {...props} alt={props.alt} className='rounded-3xl my-6' />,
   a: CustomLink,
   h1: (props: any) => <h1 className="my-6 text-4xl font-bold tracking-tight sm:text-5xl" {...props} />,
   h2: (props: any) => <h2 className="my-6 text-3xl font-bold tracking-tight sm:text-4xl" {...props} />,

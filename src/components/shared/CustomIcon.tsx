@@ -15,6 +15,8 @@ import {
 import JikeLogo from '../../../public/images/icon/jike.png'
 import Image from 'next/image'
 import JUSTLogo from '../../../public/images/icon/JUST.png'
+import LusunLogo from '../../../public/images/company-logos/lusun.ico'
+import TestinLogo from '../../../public/images/company-logos/testin.png'
 export function CustomIcon({
   name,
   size = 20,
@@ -36,10 +38,11 @@ export function CustomIcon({
     case 'email':
       return <Envelope size={size} weight="duotone" />
     case 'college':
-      return <Image 
-        src={JUSTLogo} 
-        alt="JUST" 
-      />
+      return <Image src={JUSTLogo} alt="JUST" />
+    case 'lusun':
+      return <Image src={LusunLogo} alt="Lusun" width={size} height={size} />
+    case 'testin':
+      return <Image src={TestinLogo} alt="Testin" width={size} height={size} />
     case 'coffee':
       return <Coffee size={size} weight="duotone" />
     case 'pill':
@@ -47,12 +50,7 @@ export function CustomIcon({
     case 'wechat':
       return <WechatLogo size={size} weight="duotone" />
     case 'jike':
-      return <Image 
-        src={JikeLogo} 
-        alt="Jike" 
-        width={size} 
-        height={size} 
-      />
+      return <Image src={JikeLogo} alt="Jike" width={size} height={size} />
     default:
       return null
   }

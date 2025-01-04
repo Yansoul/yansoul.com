@@ -92,15 +92,15 @@ export type CareerItemType = {
 export const careerList: Array<CareerItemType> = [
   {
     company: '原则科技',
-    title: '产品经理',
-    logo: 'bank',
+    title: '产品',
+    logo: 'lusun',
     start: '2024.4',
     end: 'Present',
   },
   {
     company: 'Testin',
     title: '产品经理',
-    logo: 'bank',
+    logo: 'testin',
     start: '2022.7',
     end: '2024.3',
   },
@@ -122,6 +122,15 @@ export type ProjectItemType = {
 
 // projects
 export const projects: Array<ProjectItemType> = [
+  {
+    name: '实况喵',
+    description: '定格瞬间，留住生动 —— 静态图一键转 Live Photo，让你的照片动起来。',
+    link: { href: 'https://apps.apple.com/app/id6472888888', label: '实况喵' },
+    logo: 'https://apps.apple.com/favicon.ico',
+    category: ['App'],
+    techStack: ['Swift'],
+    tags: ['Live Photo', 'Entertainment'], 
+  },
   {
     name: '白瓜面试',
     description: '再也不想背八股了',

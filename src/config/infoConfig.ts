@@ -52,11 +52,6 @@ export const socialLinks: Array<SocialLinkType> = [
     icon: 'github',
     href: 'https://github.com/yansoul',
   },
-  {
-    name: 'Wechat',
-    icon: 'wechat',
-    href: '/',
-  },
 ]
 
 // education
@@ -175,6 +170,15 @@ export type ChangelogItemType = {
 
 export const changelogList: Array<ChangelogItemType> = [
   {
+    date: '2025-01-04',
+    content: [
+      {
+        title: '🔨 更新',
+        description: '添加公司 Logo，友链以及微信',
+      },
+    ],
+  },
+  {
     date: '2024-12-17',
     content: [
       {
@@ -220,8 +224,8 @@ export type FriendItemType = {
 }
 
 export const friends: Array<FriendItemType> = [
-/*   {
-    name: 'Corey Chiu',
-    link: { href: 'https://coreychiu.com' },
-  }, */
+  {
+    name: '高正阳',
+    link: { href: 'https://gzy.dingdangdream.com/' },
+  },
 ]

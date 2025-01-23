@@ -120,8 +120,8 @@ export const projects: Array<ProjectItemType> = [
   {
     name: '实况喵',
     description: '定格瞬间，留住生动 —— 静态图一键转 Live Photo，让你的照片动起来。',
-    link: { href: 'https://apps.apple.com/app/id6472888888', label: '实况喵' },
-    logo: 'https://apps.apple.com/favicon.ico',
+    link: { href: 'https://apps.apple.com/cn/app/%E5%AE%9E%E5%86%B5%E5%96%B5-%E9%9D%99%E6%80%81%E7%85%A7%E7%89%87%E7%94%9F%E6%88%90live%E5%9B%BE/id6739980277', label: '实况喵' },
+    logo: '/livemiaow.png',
     category: ['App'],
     techStack: ['Swift'],
     tags: ['Live Photo', 'Entertainment'], 

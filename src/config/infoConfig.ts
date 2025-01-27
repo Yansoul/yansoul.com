@@ -52,6 +52,16 @@ export const socialLinks: Array<SocialLinkType> = [
     icon: 'github',
     href: 'https://github.com/yansoul',
   },
+  {
+    name: 'Linkedin',
+    icon: 'linkedin',
+    href: 'https://www.linkedin.com/in/liuzhengyanshuo/',
+  },
+  {
+    name: 'Product Hunt',
+    icon: 'producthunt',
+    href: 'https://www.producthunt.com/@yansoul',
+  },
 ]
 
 // education

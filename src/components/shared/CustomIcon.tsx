@@ -6,12 +6,13 @@ import {
   XLogo,
   InstagramLogo,
   Envelope,
-  GraduationCap,
   Coffee,
   Butterfly,
   Pill,
+  LinkedinLogo,
   WechatLogo,
 } from '@phosphor-icons/react'
+import { IconBrandProducthunt } from '@tabler/icons-react'
 import JikeLogo from '../../../public/images/icon/jike.png'
 import Image from 'next/image'
 import JUSTLogo from '../../../public/images/icon/JUST.png'
@@ -51,6 +52,10 @@ export function CustomIcon({
       return <WechatLogo size={size} weight="duotone" />
     case 'jike':
       return <Image src={JikeLogo} alt="Jike" width={size} height={size} />
+    case 'linkedin':
+      return <LinkedinLogo size={size} weight="duotone" />
+    case 'producthunt':
+      return <IconBrandProducthunt size={size} />
     default:
       return null
   }

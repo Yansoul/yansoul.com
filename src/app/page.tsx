@@ -1,4 +1,3 @@
-
 import { Container } from '@/components/layout/Container'
 import Newsletter from '@/components/home/Newsletter'
 import Feed from '@/components/home/Feed'
@@ -35,6 +34,17 @@ export default async function Home() {
               {introduction}
             </p>
             <SocialLinks className='md:mt-24'/>
+            <div className="mt-4">
+              <a 
+                href="https://cal.com/yansoul" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-sm font-medium text-primary hover:text-primary/30"
+              >
+                <CustomIcon name="calendar" size={18} />
+                预约会面
+              </a>
+            </div>
           </div>
           <div className="relative flex size-full items-center justify-center overflow-hidden w-full px-20 md:px-0 md:w-2/3 ml-auto md:mr-8">
             <IconCloud iconSlugs={techIcons} />

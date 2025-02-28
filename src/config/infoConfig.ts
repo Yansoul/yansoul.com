@@ -1,6 +1,6 @@
 export const name = '研硕'
 export const headline = '产品、设计、开发'
-export const introduction = '00 后产品经理，偶尔写点代码，创业中'
+export const introduction = '00 后创业练习生，产品/设计/开发/运营，创业中'
 export const email = 'l1150001740@gmail.com'
 export const githubUsername = 'yansoul'
 

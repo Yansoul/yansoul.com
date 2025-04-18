@@ -130,7 +130,7 @@ export const projects: Array<ProjectItemType> = [
   {
     name: 'SumiNote',
     description: 'AI Study & Research Assistant Free Online',
-    link: { href: 'https://suminote.com', label: 'SumiNote' },
+    link: { href: 'suminote.com', label: 'SumiNote' },
     logo: 'https://suminote.com/favicon.ico',
     category: ['Website'],
     techStack: ['Next.js', 'TailwindCSS'],

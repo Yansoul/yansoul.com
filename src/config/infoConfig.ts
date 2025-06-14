@@ -9,9 +9,8 @@ export const githubUsername = 'yansoul'
 export const aboutMeHeadline = '👋你好，我是研硕'
 export const aboutParagraphs = [
   '22 年来北京实习，曾经在 SaaS 公司做过两年产品，后来离开了 ToB 行业，来到原则科技创业，主要做 AI2C 方向产品。',
-  '关注最新技术，AI 产品，商业。',
+  '关注最新技术，AI 产品，商业。创业是假，修行是真。',
   '只工作，不上班，一年有一半时间待在北京。另一半时间会待在世界的什么地方？我也不知道。',
-  '最近越来越觉得，创业是假，修行是真。',
 ]
 
 // projects

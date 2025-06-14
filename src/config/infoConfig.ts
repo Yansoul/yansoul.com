@@ -1,15 +1,16 @@
 export const name = '研硕'
 export const headline = '产品、设计、开发'
 export const introduction = '00 后创业练习生，产品/设计/开发/运营，创业中'
-export const email = 'l1150001740@gmail.com'
+export const email = 'i@yanshuo.com'
 export const githubUsername = 'yansoul'
 
 // about page
-export const aboutMeHeadline = '我是研硕，base 北京，创业中'
+export const aboutMeHeadline = '👋你好，我是研硕'
 export const aboutParagraphs = [
-  // "I love coding. I learned programming when I in college. I wrote my first program in Java when I was 18.",
-  // "I have a lot of hobbies, such as travelling, photography, watching movies, music and so on.",
-  // "I'm working as a software develop engineer in Shenzhen, China now. And I'm building a lot of side projects in my spare time."
+  '22 年来北京实习，曾经在 SaaS 公司做过两年产品，后来离开了 ToB 行业，来到原则科技创业，主要做 AI2C 方向产品。',
+  '关注最新技术，AI 产品，商业。',
+  '只工作，不上班，一年有一半时间待在北京。另一半时间会待在世界的什么地方？我也不知道。',
+  '最近越来越觉得，创业是假，修行是真。',
 ]
 
 // projects
@@ -147,12 +148,16 @@ export const projects: Array<ProjectItemType> = [
   },
   {
     name: '实况喵',
-    description: '定格瞬间，留住生动 —— 静态图一键转 Live Photo，让你的照片动起来。',
-    link: { href: 'apps.apple.com/cn/app/%E5%AE%9E%E5%86%B5%E5%96%B5-%E9%9D%99%E6%80%81%E7%85%A7%E7%89%87%E7%94%9F%E6%88%90live%E5%9B%BE/id6739980277', label: '实况喵' },
+    description:
+      '定格瞬间，留住生动 —— 静态图一键转 Live Photo，让你的照片动起来。',
+    link: {
+      href: 'apps.apple.com/cn/app/%E5%AE%9E%E5%86%B5%E5%96%B5-%E9%9D%99%E6%80%81%E7%85%A7%E7%89%87%E7%94%9F%E6%88%90live%E5%9B%BE/id6739980277',
+      label: '实况喵',
+    },
     logo: '/livemiaow.png',
     category: ['App'],
     techStack: ['Swift'],
-    tags: ['Live Photo', 'Entertainment'], 
+    tags: ['Live Photo', 'Entertainment'],
   },
   {
     name: '白瓜面试',

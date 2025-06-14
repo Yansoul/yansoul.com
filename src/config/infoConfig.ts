@@ -1,6 +1,7 @@
 export const name = '研硕'
-export const headline = '产品、设计、开发'
-export const introduction = '00 后创业练习生，产品/设计/开发/运营，创业中'
+export const headline = '做产品，不做产品经理'
+export const introduction =
+  '00 后创业练习生，产品兼设计、开发、运营、客服。关注最新技术，AI 产品，商业。'
 export const email = 'i@yanshuo.com'
 export const githubUsername = 'yansoul'
 
@@ -259,6 +260,17 @@ export type FriendItemType = {
 export const friends: Array<FriendItemType> = [
   {
     name: '高正阳',
+    logo: 'https://gzy.dingdangdream.com/_next/static/media/avatar.29d26925.jpg',
     link: { href: 'https://gzy.dingdangdream.com/' },
+  },
+  {
+    name: 'Airbo',
+    logo: 'https://cdn.airbozh.cn/blog/avatar.png',
+    link: { href: 'https://www.airbozh.cn/' },
+  },
+  {
+    name: 'Timothy Lau',
+    logo: 'https://timlau.me/favicon.ico',
+    link: { href: 'https://timlau.me/' },
   },
 ]

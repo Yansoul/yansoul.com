@@ -128,13 +128,22 @@ export type ProjectItemType = {
 // projects
 export const projects: Array<ProjectItemType> = [
   {
+    name: '白瓜学术',
+    description: '一站式 AI 学习与科研助手',
+    link: { href: 'https://x.baigua.com', label: '白瓜学术' },
+    logo: 'https://x.baigua.com/baigua-icon/favicon.ico',
+    category: ['Website'],
+    techStack: ['Next.js', 'TailwindCSS', 'Shadcn/UI', 'Nest.js'],
+    tags: ['AI Native', 'DeepResearch'],
+  },
+  {
     name: 'SumiNote',
     description: 'AI Study & Research Assistant Free Online',
     link: { href: 'suminote.com', label: 'SumiNote' },
     logo: 'https://suminote.com/favicon.ico',
     category: ['Website'],
-    techStack: ['Next.js', 'TailwindCSS'],
-    tags: ['AI', 'Technology'],
+    techStack: ['Next.js', 'TailwindCSS', 'Shadcn/UI', 'Nest.js'],
+    tags: ['AI Native', 'DeepResearch'],
   },
   {
     name: '实况喵',
@@ -151,8 +160,8 @@ export const projects: Array<ProjectItemType> = [
     link: { href: 'm.baigua.com', label: '白瓜面试' },
     logo: 'https://m.baigua.com/favicon.ico',
     category: ['Website'],
-    techStack: ['Next.js', 'TailwindCSS', 'Shadcn/UI', 'Electron'],
-    tags: ['Teleprompter', 'Efficiency'],
+    techStack: ['Next.js', 'TailwindCSS', 'Shadcn/UI', 'Electron', 'Nest.js'],
+    tags: ['AI Interview'],
   },
   {
     name: 'FlowPrompter',
@@ -161,7 +170,7 @@ export const projects: Array<ProjectItemType> = [
     link: { href: 'flowprompter.app', label: 'FlowPrompter' },
     logo: 'https://flowprompter.app/favicon.ico',
     category: ['Website'],
-    techStack: ['Next.js', 'TailwindCSS'],
+    techStack: ['Next.js', 'TailwindCSS', 'Electron'],
     tags: ['Teleprompter', 'Efficiency'],
   },
 ]

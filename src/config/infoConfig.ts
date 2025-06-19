@@ -1,5 +1,5 @@
 export const name = '研硕'
-export const headline = '关于刘郑研硕的一切'
+export const headline = '关于研硕的一切'
 export const introduction =
   '00 后创业练习生，产品兼设计、开发、运营、客服。关注最新技术，AI 产品，商业。'
 export const email = 'i@yanshuo.com'

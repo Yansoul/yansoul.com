@@ -19,12 +19,31 @@ async function importBlog(
     'utf-8'
   )
   
-  const { data } = matter(source)
+  const { data, content } = matter(source)
+  
+  // 从内容中提取前100个字符作为描述
+  // 移除markdown语法和多余的空白字符
+  const cleanContent = content
+    .replace(/^#+\s+.*$/gm, '') // 移除标题
+    .replace(/^\s*[-*+]\s+/gm, '') // 移除列表符号
+    .replace(/\*\*(.*?)\*\*/g, '$1') // 移除粗体语法
+    .replace(/\*(.*?)\*/g, '$1') // 移除斜体语法
+    .replace(/`(.*?)`/g, '$1') // 移除行内代码语法
+    .replace(/\[([^\]]+)\]\([^)]+\)/g, '$1') // 移除链接，保留文本
+    .replace(/\n\s*\n/g, ' ') // 将多个换行替换为空格
+    .replace(/\s+/g, ' ') // 将多个空格替换为单个空格
+    .trim()
+  
+  // 提取前100个字符
+  const autoDescription = cleanContent.length > 100 
+    ? cleanContent.substring(0, 100) + '...'
+    : cleanContent
   
   // @ts-expect-error
   return {
     slug: blogFilename.replace(/\.mdx$/, ''),
     ...data,
+    description: data.description || autoDescription, // 如果frontmatter中有description则使用，否则使用自动生成的
   }
 }
 

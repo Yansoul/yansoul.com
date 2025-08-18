@@ -18,6 +18,7 @@ import Image from 'next/image'
 import JUSTLogo from '../../../public/images/icon/JUST.png'
 import LusunLogo from '../../../public/images/company-logos/lusun.ico'
 import TestinLogo from '../../../public/images/company-logos/testin.png'
+import RednoteLogo from '../../../public/images/icon/rednote.png'
 export function CustomIcon({
   name,
   size = 20,
@@ -56,6 +57,8 @@ export function CustomIcon({
       return <LinkedinLogo size={size} weight="duotone" />
     case 'producthunt':
       return <IconBrandProducthunt size={size} />
+    case 'rednote':
+      return <Image src={RednoteLogo} alt="Jike" width={size} height={size} />
     default:
       return null
   }

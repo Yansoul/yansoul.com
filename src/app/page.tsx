@@ -21,6 +21,7 @@ import {
 import GithubContributions from '@/components/home/GithubCalendar'
 import { CustomIcon } from '@/components/shared/CustomIcon'
 import IconCloud from '@/components/ui/icon-cloud'
+import { Button } from '@/components/Button'
 
 export default async function Home() {
   let blogList = (await getAllBlogs()).slice(0, 4)
@@ -38,10 +39,7 @@ export default async function Home() {
             <p className="mt-6 text-base text-muted-foreground">
               {introduction}
             </p>
-            <p className="mt-24 text-base text-muted-foreground">
-              {' '}
-              社交媒体：
-            </p>
+            <p className="mt-24 text-base text-muted-foreground"> 社交媒体：</p>
             <SocialLinks className="md:mt-6" />
           </div>
           <div className="relative ml-auto flex size-full w-full items-center justify-center overflow-hidden px-20 md:mr-8 md:w-2/3 md:px-0">
@@ -101,6 +99,24 @@ export default async function Home() {
             {blogList.map((blog: BlogType) => (
               <BlogCard key={blog.slug} blog={blog} titleAs="h3" />
             ))}
+            <div>
+              <Button href="/blogs" variant="primary">
+                View all posts
+                <svg
+                  className="ml-1 h-4 w-4 stroke-current"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </Button>
+            </div>
           </div>
 
           {/* right column */}

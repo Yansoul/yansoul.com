@@ -1,6 +1,7 @@
 import GoogleAnalytics from "./google-analytics";
 import OpenPanelAnalytics from "./open-panel-analytics";
 import { PlausibleAnalytics } from "./plausible-analytics";
+import ClarityAnalytics from "./clarity-analytics";
 
 export function Analytics() {
   if (process.env.NODE_ENV !== "production") {
@@ -17,6 +18,9 @@ export function Analytics() {
 
       {/* plausible analytics */}
       <PlausibleAnalytics />
+
+      {/* microsoft clarity analytics */}
+      <ClarityAnalytics />
     </>
   );
 }

@@ -20,7 +20,7 @@ export const projectIntro = '凡为过往，皆为序章'
 
 // blog
 export const blogHeadLine = '思维碎片'
-export const blogIntro = '语不求惊人，不求正确，只求真实'
+export const blogIntro = '记录创业过程中的碎碎念，未必正确，一定真实。'
 
 // changelog
 export const changelogHeadLine = "What's new about this site"

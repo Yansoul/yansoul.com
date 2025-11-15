@@ -49,22 +49,35 @@ export default async function Home() {
         <div className="mt-6 border-t border-zinc-100 py-8 dark:border-zinc-700/40">
           <GithubContributions />
         </div>
-        {/* projects */}
+        {/* blogs */}
         <div className="mx-auto my-4 flex max-w-xl flex-col gap-6 border-t border-muted py-8 lg:max-w-none">
           <h2 className="text-3xl font-semibold tracking-tight opacity-80 md:text-5xl">
-            {projectHeadLine}
+            {blogHeadLine}
           </h2>
           <p className="mb-8 max-w-2xl text-base text-muted-foreground">
-            {projectIntro}
+            {blogIntro}
           </p>
-          <ul
-            role="list"
-            className="grid grid-cols-1 gap-x-8 gap-y-12 sm:grid-cols-2 md:grid-cols-3"
-          >
-            {projects.map((project) => (
-              <ProjectCard key={project.name} project={project} titleAs="h3" />
-            ))}
-          </ul>
+          {blogList.map((blog: BlogType) => (
+            <BlogCard key={blog.slug} blog={blog} titleAs="h3" />
+          ))}
+          <div>
+            <Button href="/blogs" variant="primary">
+              View all posts
+              <svg
+                className="ml-1 h-4 w-4 stroke-current"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M9 5l7 7-7 7"
+                />
+              </svg>
+            </Button>
+          </div>
         </div>
         <div className="mx-auto my-4 flex max-w-xl flex-col gap-6 border-t border-muted py-8 lg:max-w-none">
           {/* <h2 className="flex flex-row items-center justify-start gap-2 text-xl font-semibold tracking-tight md:text-3xl opacity-80 mb-4">
@@ -86,37 +99,29 @@ export default async function Home() {
         </div>
         <div className="mx-auto my-8 flex max-w-xl flex-col gap-6 border-t border-muted py-8 lg:max-w-none">
           <h2 className="text-3xl font-semibold tracking-tight opacity-80 md:text-5xl">
-            {blogHeadLine}
+            {projectHeadLine}
           </h2>
           <p className="mb-8 max-w-2xl text-base text-muted-foreground">
-            {blogIntro}
+            {projectIntro}
           </p>
         </div>
+        {/* projects */}
         <div className="mx-auto grid max-w-xl grid-cols-1 gap-y-20 lg:max-w-none lg:grid-cols-2">
           {/* left column */}
           {/* blog */}
           <div className="flex flex-col gap-16">
-            {blogList.map((blog: BlogType) => (
-              <BlogCard key={blog.slug} blog={blog} titleAs="h3" />
-            ))}
-            <div>
-              <Button href="/blogs" variant="primary">
-                View all posts
-                <svg
-                  className="ml-1 h-4 w-4 stroke-current"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M9 5l7 7-7 7"
-                  />
-                </svg>
-              </Button>
-            </div>
+            <ul
+              role="list"
+              className="grid grid-cols-1 gap-x-8 gap-y-12 sm:grid-cols-1 md:grid-cols-2"
+            >
+              {projects.map((project) => (
+                <ProjectCard
+                  key={project.name}
+                  project={project}
+                  titleAs="h3"
+                />
+              ))}
+            </ul>
           </div>
 
           {/* right column */}

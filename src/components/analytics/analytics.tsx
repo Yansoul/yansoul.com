@@ -3,6 +3,7 @@ import OpenPanelAnalytics from "./open-panel-analytics";
 import { PlausibleAnalytics } from "./plausible-analytics";
 import ClarityAnalytics from "./clarity-analytics";
 import VercelAnalytics from "./vercel-analytics";
+import VercelSpeedInsights from "./speed-insights";
 
 export function Analytics() {
   if (process.env.NODE_ENV !== "production") {
@@ -13,6 +14,9 @@ export function Analytics() {
     <>
       {/* vercel analytics */}
       <VercelAnalytics />
+
+      {/* vercel speed insights */}
+      <VercelSpeedInsights />
 
       {/* openpanel analytics */}
       <OpenPanelAnalytics />

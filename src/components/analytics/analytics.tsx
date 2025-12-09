@@ -1,13 +1,14 @@
-import GoogleAnalytics from "./google-analytics";
-import OpenPanelAnalytics from "./open-panel-analytics";
-import { PlausibleAnalytics } from "./plausible-analytics";
-import ClarityAnalytics from "./clarity-analytics";
-import VercelAnalytics from "./vercel-analytics";
-import VercelSpeedInsights from "./speed-insights";
+import GoogleAnalytics from './google-analytics'
+import OpenPanelAnalytics from './open-panel-analytics'
+import { PlausibleAnalytics } from './plausible-analytics'
+import ClarityAnalytics from './clarity-analytics'
+import VercelAnalytics from './vercel-analytics'
+import VercelSpeedInsights from './speed-insights'
+import { PostHogAnalytics } from './posthog-analytics'
 
 export function Analytics() {
-  if (process.env.NODE_ENV !== "production") {
-    return null;
+  if (process.env.NODE_ENV !== 'production') {
+    return null
   }
 
   return (
@@ -29,6 +30,9 @@ export function Analytics() {
 
       {/* microsoft clarity analytics */}
       <ClarityAnalytics />
+
+      {/* posthog analytics */}
+      <PostHogAnalytics />
     </>
-  );
+  )
 }

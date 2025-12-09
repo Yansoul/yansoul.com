@@ -4,6 +4,7 @@ import { notFound } from 'next/navigation'
 import { getBlogBySlug } from '@/lib/blogs'
 import { getMDXContent } from '@/lib/mdx'
 import { BlogLayout } from '@/components/layout/BlogLayout'
+import { BlogPostTracker } from '@/components/analytics/BlogPostTracker'
 
 export const runtime = process.env.NEXT_RUNTIME === 'edge' ? 'edge' : 'nodejs'
 
@@ -37,12 +38,15 @@ export default async function BlogPage({ params }: Props) {
   const content = await getMDXContent(params.slug)
 
   return (
-    <BlogLayout
-        blog={blog}
-    >
-      <div className="mt-8 prose dark:prose-invert">
-        {content}
-      </div>
-    </BlogLayout>
+    <>
+      <BlogPostTracker slug={blog.slug} title={blog.title} />
+      <BlogLayout
+          blog={blog}
+      >
+        <div className="mt-8 prose dark:prose-invert">
+          {content}
+        </div>
+      </BlogLayout>
+    </>
   )
 }

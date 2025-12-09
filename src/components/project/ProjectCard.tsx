@@ -6,11 +6,21 @@ import { ArrowUpRight } from '@phosphor-icons/react'
 import { ProjectItemType } from '@/config/infoConfig'
 import { utm_source } from '@/config/siteConfig'
 import Link from 'next/link'
+import { trackEvent } from '@/lib/posthog-utils'
 
 
 export function ProjectCard({ project, titleAs }: { project: ProjectItemType, titleAs?: keyof JSX.IntrinsicElements }) {
   const utmLink = `https://${project.link.href}?utm_source=${utm_source}`
   let Component = titleAs ?? 'h2'
+  
+  const handleClick = () => {
+    trackEvent('project_card_clicked', {
+      project_name: project.name,
+      project_link: project.link.href,
+      project_tags: project.tags?.join(', '),
+    })
+  }
+  
   return (
     <li className='group relative flex flex-col items-start h-full'>
       <div className="relative flex flex-col justify-between h-full w-full p-4 rounded-2xl border border-muted-foreground/20 shadow-sm transition-all group-hover:scale-[1.03] group-hover:shadow-md group-hover:bg-muted/5">
@@ -56,6 +66,7 @@ export function ProjectCard({ project, titleAs }: { project: ProjectItemType, ti
           href={utmLink}
           target='_blank'
           rel='noopener noreferrer'
+          onClick={handleClick}
           className='h-full w-full absolute'>
           <ArrowUpRight size={32} weight="duotone" className="absolute top-2 right-8 h-4 w-4 group-hover:text-primary" />
         </Link>

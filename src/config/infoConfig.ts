@@ -8,7 +8,7 @@ export const githubUsername = 'yansoul'
 // about page
 export const aboutMeHeadline = '👋你好，我是研硕'
 export const aboutParagraphs = [
-  '22 年来北京实习，曾经在 SaaS 公司做过两年产品，后来离开了 ToB 行业，来到原则科技创业，主要做 AI2C 方向产品。',
+  '22 年来北京实习，曾经在 SaaS 公司做过两年产品，后来离开了 ToB 行业，来到原则科技创业，主要做 ToC 产品。',
   '关注最新技术，AI 产品，商业。创业是假，修行是真。',
   '我们团队正在践行远程办公，所以我现在的状态是——只工作，不上班。',
   '一年我会有一半时间待在北京。另一半时间会待在世界的什么地方？我也不知道。',
@@ -20,7 +20,7 @@ export const projectIntro = '凡为过往，皆为序章'
 
 // blog
 export const blogHeadLine = '思维碎片'
-export const blogIntro = '记录创业过程中的碎碎念，未必正确，一定真实。'
+export const blogIntro = '记录创业过程中的碎碎念。没有客观，只有主观；没有正确，只有真实。'
 
 // changelog
 export const changelogHeadLine = "What's new about this site"

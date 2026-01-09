@@ -1,10 +1,10 @@
 'use client'
 
-import { useEffect } from 'react'
+import { useEffect, Suspense } from 'react'
 import posthog from 'posthog-js'
 import { usePathname, useSearchParams } from 'next/navigation'
 
-export function PostHogAnalytics() {
+function PostHogAnalyticsInner() {
   const pathname = usePathname()
   const searchParams = useSearchParams()
 
@@ -35,4 +35,12 @@ export function PostHogAnalytics() {
   }, [pathname, searchParams])
 
   return null
+}
+
+export function PostHogAnalytics() {
+  return (
+    <Suspense fallback={null}>
+      <PostHogAnalyticsInner />
+    </Suspense>
+  )
 }

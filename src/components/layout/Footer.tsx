@@ -1,7 +1,7 @@
 import Link from 'next/link'
 
 import { ContainerInner, ContainerOuter } from '@/components/layout/Container'
-import { footerItems } from '@/config/siteConfig'
+import { footerItems, footerToolLink } from '@/config/siteConfig'
 import { ThemeToggle } from '@/components/shared/ThemeToggle'
 import { name } from '@/config/infoConfig'
 import SocialLinks from '@/components/home/SocialLinks'
@@ -32,10 +32,27 @@ export function Footer() {
         <div className="border-t border-muted pb-16 pt-10">
           <ContainerInner>
             <div className="flex flex-col items-center justify-between gap-6 sm:flex-row sm:items-start">
-              <div className="flex flex-wrap justify-center gap-x-6 gap-y-1 text-sm font-medium">
-                {footerItems.map((item) => (
-                  <NavLink key={item.name} href={item.href}>{item.name}</NavLink>
-                ))}
+              <div className="flex w-full flex-col items-center sm:w-auto sm:items-start">
+                <div className="flex flex-wrap justify-center gap-x-6 gap-y-1 text-sm font-medium sm:justify-start">
+                  {footerItems.map((item) => (
+                    <NavLink key={item.name} href={item.href}>{item.name}</NavLink>
+                  ))}
+                </div>
+                {footerToolLink ? (
+                  <p className="mt-3 text-xs text-muted-foreground">
+                    <span className="mr-2 uppercase tracking-[0.18em] text-muted-foreground/70">
+                      {footerToolLink.label}
+                    </span>
+                    <a
+                      href={footerToolLink.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="transition hover:text-primary"
+                    >
+                      {footerToolLink.name}
+                    </a>
+                  </p>
+                ) : null}
               </div>
               <div className='flex flex-col justify-center items-start'>
                 <div className='flex flex-row justify-end items-center gap-2'>

@@ -7,6 +7,12 @@ type NavItemType = {
   href: string
 }
 
+type FooterToolLink = {
+  label: string
+  name: string
+  href: string
+}
+
 export const footerItems: Array<NavItemType> = [
   {
     name: 'Home',
@@ -33,6 +39,12 @@ export const footerItems: Array<NavItemType> = [
     href: '/changelog',
   },
 ]
+
+export const footerToolLink: FooterToolLink | null = {
+  label: 'Tool:',
+  name: 'Time Overlay',
+  href: 'https://timeoverlay.co',
+}
 
 export const navItems: Array<NavItemType> = [
   {

@@ -135,6 +135,15 @@ export type ProjectItemType = {
 // projects
 export const projects: Array<ProjectItemType> = [
   {
+    name: 'corivo',
+    description: 'A shadow agent that grows with you',
+    link: { href: 'https://corivo.ai', label: 'corivo' },
+    logo: 'https://corivo.ai/favicon.ico',
+    category: ['Website'],
+    techStack: ['Tauri', 'Rust', 'Typescript'],
+    tags: ['Shadow Agent', "Agent Memory"],
+  },
+  {
     name: '白瓜学术',
     description: '一站式 AI 学习与科研助手',
     link: { href: 'https://x.baigua.com', label: '白瓜学术' },
